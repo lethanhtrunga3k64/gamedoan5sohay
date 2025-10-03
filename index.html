@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Đoán Số Cute 5 Chữ Số</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>GAME ĐOÁN SỐ</h2>
+    <div class="desc">
+      Đoán số bí mật gồm <span id="numLength"></span> chữ số, các chữ số đều khác nhau và chữ số đầu không phải 0.
+    </div>
+    <div class="symbol-explain">
+      <b>Ký hiệu:</b> <br>
+      <span style="color:#388e3c;font-weight:bold;">✓</span> : Đúng số và đúng vị trí &nbsp; &nbsp;
+      <span style="color:#f7b731;font-weight:bold;">○</span> : Đúng số nhưng sai vị trí &nbsp; &nbsp;
+      <span style="color:#d32f2f;font-weight:bold;">✗</span> : Sai hoàn toàn
+    </div>
+    <div id="attemptInfo"></div>
+    <form id="guessForm" autocomplete="off">
+      <div class="guess-box" id="inputs"></div>
+      <button type="submit" class="btn">Đoán!</button>
+    </form>
+    <div id="error"></div>
+    <div class="history" id="history"></div>
+    <div class="end-message" id="endMessage"></div>
+    <button id="playAgain" class="btn">Chơi lại</button>
+    <div class="guide">
+      <div class="guide-title">Hướng dẫn chơi:</div>
+      <ul>
+        <li>Số bí mật gồm <b>5 chữ số</b>, các chữ số không trùng nhau và chữ số đầu tiên khác 0.</li>
+        <li>Bạn nhập dự đoán bằng cách điền vào <b>5 ô trống</b> phía trên rồi bấm nút <b>Đoán!</b>.</li>
+        <li>Mỗi lần đoán, kết quả hiển thị bằng ký hiệu:
+          <ul>
+            <li><span style="color:#388e3c;font-weight:bold;">✓</span> : Đúng số và đúng vị trí</li>
+            <li><span style="color:#f7b731;font-weight:bold;">○</span> : Đúng số nhưng sai vị trí</li>
+            <li><span style="color:#d32f2f;font-weight:bold;">✗</span> : Sai hoàn toàn</li>
+          </ul>
+        </li>
+        <li>Bạn có tối đa <b>10 lượt đoán</b>. Nếu đoán đúng số bí mật, bạn thắng!</li>
+        <li>Kết thúc lượt hoặc đoán đúng, nhấn nút <b>Chơi lại</b> để chơi tiếp.</li>
+      </ul>
+      <div style="margin-top:10px; color:#ff4e50; font-weight:500;">
+        Chúc bạn chơi vui và rèn luyện trí tuệ!
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
